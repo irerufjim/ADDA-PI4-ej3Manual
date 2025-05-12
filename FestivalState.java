@@ -59,7 +59,8 @@ public class FestivalState {
 		Integer area = actual.index() % DatosFestival.getNumAreas();
 		Integer ticket = actual.index() / DatosFestival.getNumAreas();
 		Double weight  = a>0? DatosFestival.getCosteAsignacion(ticket, area):0.;
-		return acumulado + weight + actual.neighbor(a).heuristic();
+		// return acumulado + weight + actual.neighbor(a).heuristic();
+		return Double.MIN_VALUE;
 	}
 	
 	public Boolean esSolucion() {
